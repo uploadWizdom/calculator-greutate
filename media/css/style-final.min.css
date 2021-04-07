@@ -6433,6 +6433,14 @@ button.close {
     -webkit-font-smoothing: antialiased
 }
 
+.fas {
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased
+}
+
+
 .fa-lg {
     font-size: 1.33333333em;
     line-height: .75em;

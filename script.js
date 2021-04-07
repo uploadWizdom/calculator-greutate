@@ -1,22 +1,32 @@
-const form = document.querySelector('form');
+var weight, height, measure, bmi, error ;
 
-form.addEventListener('submit', function(e){
-    e.preventDefault();
+function calculate() {
+	weight = document.getElementById("weight").value;
+	height = document.getElementById("height").value;
+	error = "Please enter some values";
+	height /= 100;
+	height *= height;
+	bmi = weight/height;
+	bmi = bmi.toFixed(1);
 
-    const height = parseInt(document.querySelector('#height').value);
-    const weight = parseInt(document.querySelector('#weight').value);
-    const results = document.querySelector('#results');
+	if (bmi <= 18.4) {
+		measure = "Your BMI is " + bmi + " which means " + "you are Underweight";
+	} else if (bmi >= 18.5 && bmi <= 24.9) {
+		measure = "Your BMI is " + bmi + " which means " + "You are Normal";
+	} else if (bmi >= 25 && bmi <= 29.9) {
+		measure = "Your BMI is " + bmi + " which means " + "You are Overweight";
+	} else if (bmi >= 30) {
+		measure = "Your BMI is " + bmi + " which means " + "You are Obese";
+	}
 
-    if((height === '') || (height < 0) || (isNaN(height))){
-        //NaN !== NaN
-        results.innerHTML = "Please provide a valid height";
+  if((height === '') || (height < 0) || (isNaN(height))){
+      //NaN !== NaN
+      document.getElementById("results").innerHTML = error;
 
-    } else if (weight === '' || weight < 0 || isNaN(weight)){
-        results.innerHTML = "Please provide a valid weight";
-    } else {
-    //calculate BMI
-    const bmi = (weight / ((height*height)/10000)).toFixed(2);
-    //display the results
-    results.innerHTML = `<span>${bmi}</span>`
-    }
-});
+  } else if (weight === '' || weight < 0 || isNaN(weight)){
+      document.getElementById("results").innerHTML = error;
+  } else {
+  //calculate BMI
+    document.getElementById("results").innerHTML = measure;
+  }
+}
