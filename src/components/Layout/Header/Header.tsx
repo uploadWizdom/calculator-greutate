@@ -82,7 +82,7 @@ export const Header: FunctionComponent = () => {
           <div className={classNames(style.navCardIcon, style.guide)} />
           <h3 className={style.navCardText}>Ghidul Parintelui</h3>
         </a>
-        <a href="" className={style.navCard}>
+        <a href="https://www.insmc.ro/contact/" className={style.navCard}>
           <div className={classNames(style.navCardIcon, style.contact)} />
           <h3 className={style.navCardText}>Contact</h3>
         </a>
