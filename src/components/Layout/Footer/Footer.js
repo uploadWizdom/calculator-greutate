@@ -38,7 +38,7 @@ export const Footer = () => {
               </a>
             </li>
             <li className={style.linkElement}>
-              <a href="/" className={style.link}>
+              <a href="https://www.insmc.ro/contact/" className={style.link}>
                 Contact
               </a>
             </li>

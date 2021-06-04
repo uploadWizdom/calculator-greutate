@@ -49,7 +49,7 @@ export const Header: FunctionComponent = () => {
             </a>
           </li>
           <li className={style.element}>
-            <a href="/" className={style.link}>
+            <a href="https://www.insmc.ro/contact/" className={style.link}>
               Contact
             </a>
           </li>
