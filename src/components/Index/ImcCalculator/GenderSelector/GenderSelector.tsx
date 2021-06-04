@@ -26,6 +26,7 @@ export const GenderSelector: FunctionComponent = () => {
       {options.map(({ text, value, icon: Icon }, index) => (
         <button
           key={index}
+          type="button"
           onClick={() => setValue("gender", value)}
           className={classNames(style.button, style[value], {
             [style.active]: value === selectedGender,
