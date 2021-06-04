@@ -38,12 +38,12 @@ export const Header: FunctionComponent = () => {
               href="https://www.insmc.ro/consiliul-stiintific/"
               className={style.link}
             >
-              Consiliul Stiintific
+              Consiliul Științific
             </a>
           </li>
           <li className={style.element}>
             <a href="/" className={style.link}>
-              Pacienti <ArrowDown width={8} />
+              Pacienți <ArrowDown width={8} />
             </a>
           </li>
           <li className={style.element}>
@@ -83,7 +83,7 @@ export const Header: FunctionComponent = () => {
         </a>
         <a href="" className={style.navCard}>
           <div className={classNames(style.navCardIcon, style.guide)} />
-          <h3 className={style.navCardText}>Ghidul Parintelui</h3>
+          <h3 className={style.navCardText}>Ghidul Părintelui</h3>
         </a>
         <a href="https://www.insmc.ro/contact/" className={style.navCard}>
           <div className={classNames(style.navCardIcon, style.contact)} />

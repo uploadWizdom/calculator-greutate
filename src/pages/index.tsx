@@ -65,7 +65,7 @@ const IndexPage = () => {
         <ImcCalculator />
 
         <div className={style.whatIsImc}>
-          <h1 className={style.heading}>CE ESTE INDICELE DE MASA CORPORALA?</h1>
+          <h1 className={style.heading}>CE ESTE INDICELE DE MASĂ CORPORALĂ?</h1>
 
           <h3 className={style.text}>
             Indicele de masa corporala sau IMC, cunoscut anterior sub numele de

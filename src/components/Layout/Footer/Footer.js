@@ -53,7 +53,7 @@ export const Footer = () => {
           <ul className={style.linksList}>
             <li className={style.linkElement}>
               <a href="/" className={style.link}>
-                Institutii
+                Instituții
               </a>
             </li>
           </ul>
