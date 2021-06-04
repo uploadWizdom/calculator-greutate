@@ -1,5 +1,28 @@
 @include foundation-global-styles;
 
 body {
-  font-size: 17px;
+  font-size: $global-font-size;
+}
+
+html {
+  font-size: 65%;
+  font-size-adjust: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 67.5%;
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 100%;
+  }
 }
