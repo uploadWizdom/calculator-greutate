@@ -58,11 +58,9 @@
 
 .subPhoneText {
   text-align: center;
-  font-size: rem-calc(11);
-  line-height: 1.33;
-  color: $black;
   margin: rem-calc(18 0 16 0);
-  font-weight: 500;
+
+  @include text-style(11, $black, 500, 1.33);
 }
 
 .contactBtn {

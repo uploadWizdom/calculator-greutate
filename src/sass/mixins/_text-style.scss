@@ -1,0 +1,14 @@
+@mixin text-style(
+  $font-size: $global-font-size,
+  $color: $black,
+  $font-weight: $global-weight-normal,
+  $line-height: -unset
+) {
+  @if $line-height == -unset {
+    $line-height: $font-size + 10;
+  }
+  font-size: nullable-rem-calc($font-size);
+  font-weight: $font-weight;
+  color: $color;
+  line-height: $line-height;
+}

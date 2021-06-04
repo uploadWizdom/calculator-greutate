@@ -1,0 +1,7 @@
+@function nullable-rem-calc($size, $base: null) {
+  @if ($size == null) {
+    @return null;
+  } @else {
+    @return rem-calc($size, $base);
+  }
+}
