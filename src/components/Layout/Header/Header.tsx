@@ -19,7 +19,7 @@ export const Header: FunctionComponent = () => {
 
         <ul className={style.list}>
           <li className={style.element}>
-            <a href="/" className={style.link}>
+            <a href="https://www.insmc.ro/despre-noi/" className={style.link}>
               Despre Noi <ArrowDown width={8} />
             </a>
           </li>
@@ -34,7 +34,10 @@ export const Header: FunctionComponent = () => {
             </a>
           </li>
           <li className={style.element}>
-            <a href="/" className={style.link}>
+            <a
+              href="https://www.insmc.ro/consiliul-stiintific/"
+              className={style.link}
+            >
               Consiliul Stiintific
             </a>
           </li>
@@ -44,7 +47,7 @@ export const Header: FunctionComponent = () => {
             </a>
           </li>
           <li className={style.element}>
-            <a href="/" className={style.link}>
+            <a href="https://www.insmc.ro/blog/" className={style.link}>
               Informari
             </a>
           </li>

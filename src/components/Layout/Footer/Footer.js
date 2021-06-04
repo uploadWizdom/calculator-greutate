@@ -13,12 +13,12 @@ export const Footer = () => {
         <div className={style.column}>
           <ul className={style.linksList}>
             <li className={style.linkElement}>
-              <a href="/" className={style.link}>
+              <a href="https://www.insmc.ro/blog/" className={style.link}>
                 Informare
               </a>
             </li>
             <li className={style.linkElement}>
-              <a href="/" className={style.link}>
+              <a href="https://www.insmc.ro/despre-noi/" className={style.link}>
                 Despre noi
               </a>
             </li>
@@ -66,8 +66,8 @@ export const Footer = () => {
           </div>
 
           <h4 className={style.subPhoneText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            Pentru programari solicitați operatorului specialitatea dorită sau
+            alegeți din ramurile predefinite.
           </h4>
 
           <button className={style.contactBtn}>Contact</button>

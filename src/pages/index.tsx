@@ -68,8 +68,11 @@ const IndexPage = () => {
           <h1 className={style.heading}>CE ESTE INDICELE DE MASA CORPORALA?</h1>
 
           <h3 className={style.text}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Indicele de masa corporala sau IMC, cunoscut anterior sub numele de
+            Indicele Quetelet, reprezinta un indicator stabilit de Organizatia
+            Mondiala a Sanatatii pentru a determina starea de sanatate a unei
+            persoane in functie de grupa sau categoria de greutate in care se
+            incadreaza.
           </h3>
         </div>
 
