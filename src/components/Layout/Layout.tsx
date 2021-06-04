@@ -23,6 +23,11 @@ export const Layout = ({ children }) => {
           Homepage - Institutul Național pentru Sănătatea Mamei și Copilului
           ”Alessandrescu-Rusescu” București
         </title>
+
+        <meta
+          name="viewport"
+          content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1.0"
+        />
       </Helmet>
 
       <Header />
