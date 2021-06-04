@@ -1,0 +1,116 @@
+.container {
+  position: relative;
+}
+
+.top {
+  max-width: rem-calc(1100);
+  margin: auto;
+
+  @include flex;
+  @include flex-align(justify, middle);
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include flex;
+}
+
+.element {
+  &:not(:last-child) {
+    margin-right: rem-calc(20);
+  }
+}
+
+.link {
+  color: $ebony-clay;
+  font-weight: 500;
+  font-size: rem-calc(10);
+  line-height: rem-calc(16);
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+}
+
+.heroImage {
+  width: 100%;
+}
+
+.downloadNow {
+  &Container {
+    @include flex;
+    @include flex-align(null, middle);
+    @include position(absolute, 0 97 0 null);
+  }
+
+  &Link {
+    display: block;
+  }
+}
+
+.nav {
+  width: 100%;
+  flex-wrap: wrap;
+  max-width: rem-calc(1100);
+  margin: auto;
+
+  @include flex;
+
+  @include position(absolute, null 0 -42 0);
+
+  &Card {
+    min-width: 20%;
+    max-width: 20%;
+    border: 1px solid $mischka;
+    border-right: none;
+    padding: rem-calc(0 30);
+    text-decoration: none;
+    background-color: $white;
+
+    @include flex;
+    @include flex-align(center, middle);
+
+    &:last-child {
+      border-right: 1px solid $mischka;
+    }
+  }
+
+  &CardIcon {
+    width: rem-calc(25);
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &CardText {
+    font-size: rem-calc(14);
+    color: $ebony-clay;
+    font-weight: 500;
+    margin-left: rem-calc(7);
+  }
+}
+
+.campaign {
+  background-image: url("../../../images//x1.png");
+}
+
+.obesity {
+  background-image: url("../../../images//x2.png");
+}
+
+.weightCalc {
+  background-image: url("../../../images//x3.png");
+}
+
+.guide {
+  background-image: url("../../../images//x4.png");
+}
+
+.contact {
+  background-image: url("../../../images//x5.png");
+}

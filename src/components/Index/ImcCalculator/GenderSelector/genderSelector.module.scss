@@ -1,0 +1,26 @@
+.button {
+  font-size: rem-calc(13);
+  color: $ebony-clay;
+  text-align: center;
+  line-height: 1;
+
+  &:first-child {
+    margin-right: rem-calc(15);
+  }
+}
+
+.icon {
+  width: rem-calc(15);
+}
+
+.m .icon {
+  width: rem-calc(20);
+}
+
+.active .icon {
+  fill: $cerulean;
+}
+
+.text {
+  display: block;
+}

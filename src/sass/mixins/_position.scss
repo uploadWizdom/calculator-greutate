@@ -1,0 +1,9 @@
+@mixin position($position-type, $offsets) {
+  position: $position-type;
+  @each $side in top, bottom, left, right {
+    $_side-value: get-side($offsets, $side);
+    @if $_side-value != null {
+      #{$side}: rem-calc($_side-value);
+    }
+  }
+}

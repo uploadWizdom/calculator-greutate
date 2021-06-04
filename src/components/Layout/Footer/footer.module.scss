@@ -1,0 +1,74 @@
+.container {
+  max-width: rem-calc(1100);
+  margin: auto;
+}
+
+.inner {
+  padding: rem-calc(37 0 20 0);
+  border-top: 1px solid $silver-chalice;
+  margin-top: rem-calc(36);
+
+  @include flex;
+}
+
+.column {
+  width: 20%;
+
+  &:first-child {
+    width: 35%;
+  }
+
+  &:last-child {
+    width: 25%;
+  }
+}
+
+.linksList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  font-weight: $global-weight-bold;
+  color: $black;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &Element {
+    font-size: rem-calc(9);
+    line-height: 1.56;
+  }
+}
+
+.phoneLink {
+  font-size: rem-calc(34);
+  line-height: 1;
+  color: $blue-ocean;
+  text-decoration: none;
+  font-weight: $global-weight-bold;
+
+  &Container {
+    text-align: center;
+  }
+}
+
+.subPhoneText {
+  text-align: center;
+  font-size: rem-calc(9);
+  line-height: 1.33;
+  color: $black;
+  margin: rem-calc(18 0 16 0);
+}
+
+.contactBtn {
+  padding: rem-calc(10 102 11);
+  background-color: $blue-ocean;
+  color: $white;
+  width: 100%;
+  font-size: rem-calc(18);
+  font-weight: 500;
+}

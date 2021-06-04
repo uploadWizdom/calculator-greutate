@@ -1,0 +1,32 @@
+.container {
+  max-width: rem-calc(1100);
+  margin: auto;
+}
+
+.whatIsImc {
+  margin-top: rem-calc(35);
+}
+
+.heading {
+  text-align: center;
+  font-size: rem-calc(24);
+  color: $abbey;
+  line-height: 1;
+  margin: rem-calc(0 0 31 0);
+}
+
+.text {
+  color: $blue-ocean;
+  font-size: rem-calc(20);
+  width: 55%;
+  margin: auto;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.cards {
+  margin-top: rem-calc(50);
+
+  @include flex;
+  @include flex-direction(column);
+}

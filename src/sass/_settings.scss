@@ -1,0 +1,95 @@
+// settings copied from:
+// https://raw.githubusercontent.com/zurb/foundation-sites/master/scss/settings/_settings.scss
+
+// Variables with `!default` might be overridden on a platform basis
+
+// 1. Global
+// ---------
+
+$global-font-size: 16px !default;
+$global-width: rem-calc(1350);
+$global-min-width: 1004;
+$global-lineheight: 130%;
+$body-background: $white;
+$body-font-color: $silver;
+$body-font-family: "Roboto", sans-serif;
+$body-antialiased: true;
+$global-margin: 1rem;
+$global-padding: 1rem;
+$global-position: 1rem;
+$global-radius: rem-calc(4);
+$global-menu-padding: 0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
+$global-text-direction: ltr;
+$global-flexbox: true;
+$global-prototype-breakpoints: false;
+$global-button-cursor: pointer;
+$global-color-pick-contrast-tolerance: 0;
+$print-transparent-backgrounds: true;
+
+$global-weight-light: 300;
+$global-weight-normal: 400;
+$global-weight-bold: 600; // as per the UX spec bold === semi-bold
+$global-weight-extra-bold: 700;
+
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  mobile: 300px,
+  medium: 480px,
+  large: 600px,
+  tablet: 700px,
+  desktop: 1004px,
+  m-desktop: 1200px,
+  l-desktop: 1355px,
+);
+$print-breakpoint: desktop;
+$breakpoint-classes: ();
+
+// 3. The Grid
+// -----------
+
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  small: 0,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: "columns";
+$block-grid-max: 6;
+
+// 49. Switch
+// ----------
+
+// $switch-background: $vog;
+// $switch-background-active: $sruli;
+$switch-size: rem-calc(44);
+$switch-margin: rem-calc(10); // todo
+$switch-paddle-background: $white;
+
+// 50. Table
+// ---------
+
+$table-background: $white;
+$table-color-scale: 5%;
+$table-border: 1px solid smart-scale($table-background, $table-color-scale);
+$table-padding: rem-calc(8 10 10);
+$table-hover-scale: 2%;
+$table-row-hover: darken($table-background, $table-hover-scale);
+$table-row-stripe-hover: darken(
+  $table-background,
+  $table-color-scale + $table-hover-scale
+);
+$table-is-striped: true;
+$table-striped-background: smart-scale($table-background, $table-color-scale);
+$table-stripe: even;
+$table-head-background: smart-scale($table-background, $table-color-scale / 2);
+$table-head-row-hover: darken($table-head-background, $table-hover-scale);
+$table-foot-background: smart-scale($table-background, $table-color-scale);
+$table-foot-row-hover: darken($table-foot-background, $table-hover-scale);
+$table-head-font-color: $body-font-color;
+$table-foot-font-color: $body-font-color;
+$show-header-for-stacked: false;
+$table-stack-breakpoint: medium;

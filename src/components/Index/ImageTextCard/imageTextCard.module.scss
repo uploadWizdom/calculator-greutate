@@ -1,0 +1,36 @@
+.container {
+  display: block;
+
+  &:not(:last-child) {
+    margin-bottom: rem-calc(79);
+  }
+
+  @include breakpoint(tablet) {
+    @include flex;
+  }
+}
+
+.image {
+  width: rem-calc(545);
+}
+
+.text {
+  font-size: rem-calc(14.5);
+  line-height: 1.07;
+  color: $abbey;
+  margin-top: rem-calc(10);
+
+  @include breakpoint(tablet) {
+    margin-top: 0;
+    margin-left: rem-calc(10);
+  }
+}
+
+.switched {
+  flex-direction: row-reverse;
+
+  & .text {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
