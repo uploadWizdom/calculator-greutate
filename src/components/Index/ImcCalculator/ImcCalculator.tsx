@@ -39,7 +39,7 @@ export const ImcCalculator: FunctionComponent = () => {
 
   return (
     <div className={style.container}>
-      <h1 className={style.title}>TESTEAZA GREUTATEA COPILULUI TAU!</h1>
+      <h1 className={style.title}>TESTEAZĂ GREUTATEA COPILULUI TĂU!</h1>
       <Form
         formMethods={formMethods as any}
         onSubmit={handleFormSubmit}
