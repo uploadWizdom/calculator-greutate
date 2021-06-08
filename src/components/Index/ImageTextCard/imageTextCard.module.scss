@@ -15,10 +15,11 @@
 }
 
 .text {
-  font-size: rem-calc(14.5);
-  line-height: 1.07;
-  color: $abbey;
   margin-top: rem-calc(10);
+  align-self: center;
+  text-align: center;
+
+  @include text-style(19, $abbey, null, 1.07);
 
   @include breakpoint(tablet) {
     margin-top: 0;
@@ -31,6 +32,6 @@
 
   & .text {
     margin-left: 0;
-    margin-right: 10px;
+    margin-right: rem-calc(10);
   }
 }

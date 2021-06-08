@@ -7,7 +7,7 @@ const style = require("./index.module.scss");
 
 const cardsData = [
   [
-    require("../images/subponderabilitate.png").default,
+    require("../images/25.png").default,
     `SUBponderabilitatea apare atunci când greutatea sau un indicele de masa
       corporala au valori sub percentila 5. Opusa obezitatii, starea de
       subponderabilitate are și ea riscurile și efectele ei negative asupra
@@ -16,7 +16,7 @@ const cardsData = [
       indicatorul analizat sub aceasta limita.`,
   ],
   [
-    require("../images/greutatenormala.png").default,
+    require("../images/24.png").default,
     `GREUTATEA normală este stadiul de greutate in care se incadreaza cei mai
       multi copii sanatosi de acelasi sex si varsta. Acest interval se situeaza
       intre percentilele 5 si 85. Greutatea normala nu este o valoarea fixa
@@ -26,7 +26,7 @@ const cardsData = [
       fiecare parametru.`,
   ],
   [
-    require("../images/1920x1080_5.jpg").default,
+    require("../images/23.png").default,
 
     `SUPRAponderabilitate apare atunci când greutatea sau indicele de masa
       corporala au valori peste percentila 85. Termenul "supraponderabilitate"
@@ -36,7 +36,7 @@ const cardsData = [
       acestia au avut greutatea mai mare.`,
   ],
   [
-    require("../images/obezitate.png").default,
+    require("../images/22.png").default,
 
     `OBEZITATEA este un diagnostic pe care medicul specialist îl ia în
       considerare atunci când greutatea sau indicele de masa corporala ating
@@ -47,7 +47,7 @@ const cardsData = [
       acelasi sex si varsta, 5% dintre acestia au avut greutatea mai mare.`,
   ],
   [
-    require("../images/obezitatesevera.png").default,
+    require("../images/21.png").default,
 
     `OBEZITATEA SEVERĂ este menționată atunci când valorile care indică
       greutatea sau indicele de masa corporala depășesc percentila 99. Este cel

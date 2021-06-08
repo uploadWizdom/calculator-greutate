@@ -1,6 +1,5 @@
 import classNames from "classnames";
 import React, { FunctionComponent } from "react";
-import ArrowDown from "../../../icons/ArrowDown";
 
 const logo = require("../../../images/logo-insmc-1-cropped.png").default;
 const heroBanner = require("../../../images/a.png").default;
@@ -13,50 +12,9 @@ export const Header: FunctionComponent = () => {
   return (
     <header className={style.container}>
       <div className={style.top}>
-        <div>
+        <a href="http://www.insmc.ro/">
           <img src={logo} alt="logo" />
-        </div>
-
-        <ul className={style.list}>
-          <li className={style.element}>
-            <a href="https://www.insmc.ro/despre-noi/" className={style.link}>
-              Despre Noi <ArrowDown width={8} />
-            </a>
-          </li>
-          <li className={style.element}>
-            <a href="/" className={style.link}>
-              Componente <ArrowDown width={8} />
-            </a>
-          </li>
-          <li className={style.element}>
-            <a href="/" className={style.link}>
-              Programe <ArrowDown width={8} />
-            </a>
-          </li>
-          <li className={style.element}>
-            <a
-              href="https://www.insmc.ro/consiliul-stiintific/"
-              className={style.link}
-            >
-              Consiliul Științific
-            </a>
-          </li>
-          <li className={style.element}>
-            <a href="/" className={style.link}>
-              Pacienți <ArrowDown width={8} />
-            </a>
-          </li>
-          <li className={style.element}>
-            <a href="https://www.insmc.ro/blog/" className={style.link}>
-              Informări
-            </a>
-          </li>
-          <li className={style.element}>
-            <a href="https://www.insmc.ro/contact/" className={style.link}>
-              Contact
-            </a>
-          </li>
-        </ul>
+        </a>
       </div>
 
       <div className={style.hero}>
