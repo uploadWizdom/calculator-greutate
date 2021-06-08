@@ -35,7 +35,7 @@
 
   @include flex;
 
-  @include position(absolute, null 0 -42 0);
+  @include position(absolute, null 0 -25 0);
 
   &Card {
     min-width: 20%;
