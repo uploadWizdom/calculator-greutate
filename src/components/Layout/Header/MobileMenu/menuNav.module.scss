@@ -1,0 +1,18 @@
+.nav {
+  padding: rem-calc(50 20 0 20);
+}
+
+.navCard {
+  color: #20293a;
+  display: block;
+  margin-bottom: rem-calc(30);
+  text-decoration: none;
+  font-family: "Cabin", sans-serif;
+}
+
+.navCardText {
+  font-weight: 500;
+  font-size: rem-calc(26);
+  line-height: 120.5%;
+  margin: 0;
+}

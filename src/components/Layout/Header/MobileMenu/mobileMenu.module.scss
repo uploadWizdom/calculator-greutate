@@ -1,0 +1,28 @@
+.container {
+  border: rem-calc(1) solid $mischka;
+  border-radius: 50%;
+  width: rem-calc(40);
+  height: rem-calc(40);
+
+  @include flex;
+  @include flex-align(center, middle);
+
+  @include breakpoint(tablet) {
+    display: none;
+  }
+}
+
+.menu {
+  width: 100%;
+  height: calc(100vh - 78px);
+  background-color: $white;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.3s opacity ease-out;
+
+  @include position(fixed, 78 null null 0);
+}
+
+.visible {
+  opacity: 1;
+}

@@ -7,6 +7,9 @@
   max-width: rem-calc(1100);
   margin: auto;
 
+  @include flex;
+  @include flex-align(justify, middle);
+
   @include breakpoint(tablet) {
     padding: 0;
   }
@@ -37,14 +40,14 @@
 }
 
 .nav {
+  display: none;
   width: 100%;
   flex-wrap: wrap;
   max-width: rem-calc(1100);
   margin: auto;
 
-  @include flex;
-
   @include breakpoint(tablet) {
+    @include flex;
     @include position(absolute, null 0 -25 0);
   }
 
