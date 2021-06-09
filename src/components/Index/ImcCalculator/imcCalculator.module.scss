@@ -1,41 +1,66 @@
 .container {
   background-color: $slight-gray;
   padding: rem-calc(38 0 29 0);
-  margin-top: rem-calc(35 + 42);
+  margin-top: rem-calc(20);
 
   background-image: url("../../../images/d.png");
   background-repeat: no-repeat;
+
+  @include breakpoint(tablet) {
+    margin-top: rem-calc(35 + 42);
+  }
 }
 
 .title {
+  line-height: 1;
+  font-size: rem-calc(25);
+
   color: $cerulean;
   text-align: center;
-  font-size: rem-calc(27);
   font-weight: 900;
-  margin-bottom: rem-calc(45);
+  margin-bottom: rem-calc(25);
   margin-top: 0;
+
+  @include breakpoint(tablet) {
+    margin-bottom: rem-calc(45);
+    font-size: rem-calc(27);
+    line-height: unset;
+  }
 }
 
 .form {
   margin: auto;
-  width: 50%;
   flex-direction: column;
   padding: rem-calc(0 40);
 
   @include flex;
+
+  @include breakpoint(tablet) {
+    width: 50%;
+  }
 }
 
 .columns {
-  @include flex;
-  @include flex-align(justify, null);
+  @include breakpoint(tablet) {
+    @include flex;
+    @include flex-align(justify, null);
+  }
 }
 
 .block {
   @include flex;
 
-  &:not(:last-child) {
-    margin-bottom: rem-calc(18);
+  margin-bottom: rem-calc(18);
+
+  @include breakpoint(tablet) {
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+
+  // &:not(:last-child) {
+  //   margin-bottom: rem-calc(18);
+  // }
 
   &Gender.blockGender {
     margin-bottom: rem-calc(13);
@@ -50,9 +75,14 @@
 }
 
 .input {
-  width: rem-calc(36);
+  width: rem-calc(40);
   text-align: center;
-  font-size: rem-calc(13);
+
+  @include breakpoint(tablet) {
+    width: rem-calc(36);
+    height: auto;
+    font-size: rem-calc(13);
+  }
 
   /* Chrome, Safari, Edge, Opera */
   &::-webkit-outer-spin-button,
@@ -74,11 +104,14 @@
 
   &Label {
     display: block;
-    font-size: rem-calc(12);
-    color: $ebony-clay;
     text-align: center;
-    line-height: 1;
     margin-top: rem-calc(4);
+
+    @include text-style(16, $ebony-clay, null, 1);
+
+    @include breakpoint(tablet) {
+      font-size: rem-calc(12);
+    }
 
     &.hor {
       align-self: center;
@@ -89,14 +122,17 @@
 }
 
 .submitBtn {
-  font-size: rem-calc(18);
   background-color: $cerulean;
   align-self: center;
-  color: $white;
   padding: rem-calc(9 69 11 68);
-  font-weight: 500;
-  margin-top: rem-calc(47);
+  margin-top: rem-calc(25);
   border-radius: rem-calc(10);
+
+  @include text-style(18, $white, 500, null);
+
+  @include breakpoint(tablet) {
+    margin-top: rem-calc(47);
+  }
 }
 
 .slider {

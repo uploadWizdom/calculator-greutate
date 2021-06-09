@@ -3,8 +3,13 @@
 }
 
 .top {
+  padding: rem-calc(15);
   max-width: rem-calc(1100);
   margin: auto;
+
+  @include breakpoint(tablet) {
+    padding: 0;
+  }
 }
 
 .hero {
@@ -17,9 +22,13 @@
 
 .downloadNow {
   &Container {
-    @include flex;
-    @include flex-align(null, middle);
-    @include position(absolute, 0 97 0 null);
+    display: none;
+
+    @include breakpoint(tablet) {
+      @include flex;
+      @include flex-align(null, middle);
+      @include position(absolute, 0 97 0 null);
+    }
   }
 
   &Link {
@@ -35,7 +44,9 @@
 
   @include flex;
 
-  @include position(absolute, null 0 -25 0);
+  @include breakpoint(tablet) {
+    @include position(absolute, null 0 -25 0);
+  }
 
   &Card {
     min-width: 20%;
@@ -55,18 +66,23 @@
   }
 
   &CardIcon {
-    width: rem-calc(25);
-    height: 100%;
+    @include breakpoint(tablet) {
+      width: rem-calc(25);
+      height: 100%;
 
-    background-repeat: no-repeat;
-    background-position: center;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   &CardText {
     font-size: rem-calc(14);
     color: $ebony-clay;
     font-weight: 500;
-    margin-left: rem-calc(7);
+
+    @include breakpoint(tablet) {
+      margin-left: rem-calc(7);
+    }
   }
 }
 

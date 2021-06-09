@@ -16,11 +16,17 @@
 }
 
 .text {
+  padding: rem-calc(0 25);
   color: $blue-ocean;
-  font-size: rem-calc(19);
-  width: 55%;
+  font-size: rem-calc(14);
   margin: auto;
   text-align: center;
+
+  @include breakpoint(tablet) {
+    padding: 0;
+    width: 55%;
+    font-size: rem-calc(19);
+  }
 }
 
 .cards {

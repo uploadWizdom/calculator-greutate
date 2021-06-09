@@ -1,6 +1,7 @@
 module.exports = {
   pathPrefix: "/calculator-greutate",
   plugins: [
+    `gatsby-plugin-react-helmet`,
     {
       resolve: "gatsby-plugin-sass",
       options: {

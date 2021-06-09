@@ -7,9 +7,9 @@ export const Footer = () => {
   return (
     <footer className={style.container}>
       <div className={style.inner}>
-        <div className={style.column}>
+        <a href="http://www.insmc.ro/" className={style.column}>
           <img src={logo} alt="logo" />
-        </div>
+        </a>
         <div className={style.column}>
           <ul className={style.linksList}>
             <li className={style.linkElement}>
