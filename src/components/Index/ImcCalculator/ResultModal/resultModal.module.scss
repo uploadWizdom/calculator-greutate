@@ -1,0 +1,64 @@
+.container {
+  font-size: rem-calc(14);
+
+  @include breakpoint(desktop) {
+    font-size: rem-calc(16);
+  }
+}
+
+.result {
+  color: $blue-ocean;
+}
+
+.mainImg {
+  margin-bottom: rem-calc(10);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.middle {
+  // margin-top: rem-calc(50);
+  color: $black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bar {
+  display: flex;
+  height: 30px;
+  width: 45%;
+
+  span {
+    height: 100%;
+    display: block;
+
+    &:first-child {
+      background-color: #d89e9e;
+    }
+
+    &:nth-child(2) {
+      background-color: #92a8bf;
+    }
+
+    &:nth-child(3) {
+      background-color: #ecd480;
+    }
+
+    &:last-child {
+      background-color: #b091be;
+    }
+  }
+}
+
+.desc {
+  color: $black;
+}
+
+.italic {
+  font-style: italic;
+}

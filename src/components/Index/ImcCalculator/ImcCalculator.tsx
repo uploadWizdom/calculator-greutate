@@ -3,7 +3,10 @@ import React, { FunctionComponent, useState } from "react";
 import { useForm } from "react-hook-form";
 import { FancyInput } from "../../common/Form/FancyInput/FancyInput";
 import { Form } from "../../common/Form/Form";
+import { Modal } from "../../common/Modal";
+import { bmi_calc } from "./bmi_calc";
 import { GenderSelector } from "./GenderSelector/GenderSelector";
+import { ResultModal } from "./ResultModal/ResultModal";
 
 const style = require("./imcCalculator.module.scss");
 
@@ -12,30 +15,36 @@ export const ImcCalculator: FunctionComponent = () => {
     defaultValues: { gender: "f", height: 150, weight: 50 },
   });
 
-  const [bmi, setBmi] = useState<number | null>(null);
+  const [bmiCalculatedObj, setBmiCalculatedObj] =
+    useState<{
+      bmi: number;
+      z_perc: number;
+      overP95: any;
+      M: number;
+      gender: string;
+    } | null>(null);
 
   function handleFormSubmit({ gender, height, weight, age_years, age_months }) {
-    const calcBmi = +(+weight / Math.pow(+height / 100, 2)).toFixed(1);
+    const wkg = +weight;
+    const hcm = +height;
+    const genderNoStr = gender === "m" ? "1" : "2";
+    var agem = age_years * 12 + age_months;
 
-    setBmi(calcBmi);
+    const bmiCalculatedObj = bmi_calc().calcBMIandPerc_Metr(
+      wkg,
+      hcm / 100,
+      genderNoStr,
+      agem
+    );
+
+    setBmiCalculatedObj({ ...bmiCalculatedObj, gender });
   }
 
   function resetBmi() {
-    if (bmi) {
-      setBmi(null);
+    if (bmiCalculatedObj) {
+      setBmiCalculatedObj(null);
     }
   }
-
-  const bmiMap = [
-    { from: -Infinity, to: 18.4, text: "Underweight" },
-    { from: 18.5, to: 24.9, text: "Normal" },
-    { from: 25, to: 29.9, text: "Overweight" },
-    { from: 30, to: Infinity, text: "Obese" },
-  ];
-
-  const bmiResult = bmi
-    ? bmiMap.find(({ from, to }) => bmi >= from && bmi <= to)
-    : null;
 
   return (
     <div className={style.container}>
@@ -151,11 +160,12 @@ export const ImcCalculator: FunctionComponent = () => {
         </button>
       </Form>
 
-      {bmiResult && (
-        <div className={style.result}>
-          Your BMI is {bmi} which means you are {bmiResult.text}
-        </div>
-      )}
+      <Modal
+        open={!!bmiCalculatedObj}
+        handleClose={() => setBmiCalculatedObj(null)}
+      >
+        {() => <ResultModal bmiCalculatedObj={bmiCalculatedObj} />}
+      </Modal>
     </div>
   );
 };

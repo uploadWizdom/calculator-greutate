@@ -1,0 +1,44 @@
+.modalContent {
+  background: $white;
+  border-radius: $global-radius;
+  box-shadow: rem-calc(0 4 9 0) rgba($black, 0.4);
+  position: relative;
+  margin: auto;
+  z-index: 1001;
+
+  // Positioning needs to be set !important to override Autosizer setting it to relative in Edge.
+  &Fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5vh;
+  }
+
+  &Absolute {
+    position: absolute !important;
+    left: 0;
+    right: 0;
+    top: 5vh;
+  }
+}
+
+.modalContentInner {
+  position: relative;
+  padding: rem-calc(30);
+}
+
+.medium {
+  width: Min(rem-calc(960), 90%);
+}
+
+.modalClose {
+  position: absolute;
+  right: rem-calc(10);
+  top: rem-calc(10);
+  cursor: pointer;
+  font-size: 20px;
+
+  &:hover {
+    color: $black;
+  }
+}

@@ -9,12 +9,14 @@ export const Layout = ({ children }) => {
   return (
     <section className={style.body}>
       <Helmet>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+
         <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap"
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Roboto%3Aital%2Cwght%400%2C400%3B0%2C500%3B1%2C400&amp;display=swap&amp;ver=5.7.2"
-          type="text/css"
-          media="all"
         />
+
         <meta
           name="viewport"
           content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, initial-scale=1.0"

@@ -1,0 +1,19 @@
+@keyframes overlayAnimate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.overlay {
+  @include position(fixed, 0);
+  background-color: rgba($black, 0.4);
+  z-index: 1000;
+  animation: overlayAnimate 500 ease-in;
+}
+
+.whiteOverlay {
+  background-color: rgba($white, 0.4);
+}

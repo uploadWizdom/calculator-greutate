@@ -1,6 +1,7 @@
 @include foundation-global-styles;
 
 body {
+  position: relative;
   font-size: $global-font-size;
 }
 

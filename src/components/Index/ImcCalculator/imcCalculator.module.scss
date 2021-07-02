@@ -124,7 +124,7 @@
 .submitBtn {
   background-color: $cerulean;
   align-self: center;
-  padding: rem-calc(9 69 11 68);
+  padding: rem-calc(10 70);
   margin-top: rem-calc(25);
   border-radius: rem-calc(10);
 
@@ -161,9 +161,4 @@
     background: #04aa6d; /* Green background */
     cursor: pointer; /* Cursor on hover */
   }
-}
-
-.result {
-  color: $blue-ocean;
-  text-align: center;
 }
