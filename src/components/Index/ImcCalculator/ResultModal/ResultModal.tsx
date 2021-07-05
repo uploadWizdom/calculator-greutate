@@ -37,14 +37,25 @@ export const ResultModal: FunctionComponent<IResultModalProps> = ({
       <div className={style.middle}>
         <p>SEMAFORUL GREUTĂȚII</p>
 
-        <div className={style.bar}>
+        {/* <div className={style.bar}>
           <span style={{ width: "5%" }}></span>
           <span style={{ width: "80%" }}></span>
           <span style={{ width: "10%" }}></span>
           <span style={{ width: "5%" }}></span>
-        </div>
+        </div> */}
 
-        <ImgBlock fileName="2_healthy" className={style.mainImg} />
+        <div className={style.mainImgContainer}>
+          <span
+            className={style.bla}
+            style={{
+              left:
+                bmiCalculatedObj.z_perc > 16
+                  ? `calc(${bmiCalculatedObj.z_perc}% - 16px)`
+                  : `${bmiCalculatedObj.z_perc}%`,
+            }}
+          />
+          <ImgBlock fileName="2_healthy" className={style.mainImg} />
+        </div>
 
         <ul className={style.list}>
           <li>

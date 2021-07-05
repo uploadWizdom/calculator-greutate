@@ -24,7 +24,11 @@
 
 .modalContentInner {
   position: relative;
-  padding: rem-calc(30);
+  padding: rem-calc(15);
+
+  @include breakpoint(desktop) {
+    padding: rem-calc(30);
+  }
 }
 
 .medium {
