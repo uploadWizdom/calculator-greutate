@@ -22,7 +22,7 @@
   text-align: center;
   padding: rem-calc(0 5);
 
-  @include text-style(19, $abbey, null, 1.07);
+  @include text-style(19, $abbey, null, normal);
 
   @include breakpoint(tablet) {
     padding: 0;

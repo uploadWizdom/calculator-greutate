@@ -23,7 +23,10 @@ export const Header: FunctionComponent = () => {
       <div className={style.hero}>
         <img className={style.heroImage} src={heroBanner} />
         <div className={style.downloadNowContainer}>
-          <a href="" className={style.downloadNowLink}>
+          <a
+            href="/assets/Brosura_finala.pdf"
+            className={style.downloadNowLink}
+          >
             <img src={downloadNowImage} className={style.downloadNow} />
           </a>
         </div>
