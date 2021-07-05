@@ -15,6 +15,8 @@ export const ImcCalculator: FunctionComponent = () => {
     defaultValues: { gender: "f", height: 150, weight: 50 },
   });
 
+  const [hasError, setHasError] = useState(false);
+
   const [bmiCalculatedObj, setBmiCalculatedObj] =
     useState<{
       bmi: number;
@@ -25,10 +27,16 @@ export const ImcCalculator: FunctionComponent = () => {
     } | null>(null);
 
   function handleFormSubmit({ gender, height, weight, age_years, age_months }) {
+    setHasError(false);
     const wkg = +weight;
     const hcm = +height;
     const genderNoStr = gender === "m" ? "1" : "2";
     var agem = age_years * 12 + age_months;
+
+    if (!age_months && !age_years) {
+      setHasError(true);
+      return;
+    }
 
     const bmiCalculatedObj = bmi_calc().calcBMIandPerc_Metr(
       wkg,
@@ -154,6 +162,10 @@ export const ImcCalculator: FunctionComponent = () => {
             </div>
           </div>
         </div>
+
+        {hasError && (
+          <p className={style.error}>Trebuie sa completezi toate campurile!</p>
+        )}
 
         <button type="submit" className={style.submitBtn}>
           Calculeaza IMC!

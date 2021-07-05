@@ -162,3 +162,14 @@
     cursor: pointer; /* Cursor on hover */
   }
 }
+
+.error {
+  color: red;
+  margin: 0;
+  position: relative;
+  top: 10px;
+
+  @include breakpoint(desktop) {
+    top: 20px;
+  }
+}

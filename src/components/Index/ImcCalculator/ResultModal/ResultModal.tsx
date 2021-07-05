@@ -51,7 +51,7 @@ export const ResultModal: FunctionComponent<IResultModalProps> = ({
               left:
                 bmiCalculatedObj.z_perc > 16
                   ? `calc(${bmiCalculatedObj.z_perc}% - 16px)`
-                  : `${bmiCalculatedObj.z_perc}%`,
+                  : `${Math.max(bmiCalculatedObj.z_perc, 0)}%`,
             }}
           />
           <ImgBlock fileName="2_healthy" className={style.mainImg} />
