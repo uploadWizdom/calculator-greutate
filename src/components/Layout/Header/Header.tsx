@@ -26,6 +26,7 @@ export const Header: FunctionComponent = () => {
           <a
             href="/assets/Brosura_finala.pdf"
             className={style.downloadNowLink}
+            target="_blank"
           >
             <img src={downloadNowImage} className={style.downloadNow} />
           </a>
