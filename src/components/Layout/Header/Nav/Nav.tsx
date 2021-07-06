@@ -16,7 +16,12 @@ export const Nav: FunctionComponent<{ style: any }> = ({ style }) => {
         <div className={classNames(style.navCardIcon, style.weightCalc)} />
         <h3 className={style.navCardText}>Calculator Greutate</h3>
       </a>
-      <a href="" className={style.navCard}>
+
+      <a
+        href="/assets/Brosura_Ghidul_Parintilor.pdf"
+        target="_blank"
+        className={style.navCard}
+      >
         <div className={classNames(style.navCardIcon, style.guide)} />
         <h3 className={style.navCardText}>Ghidul Părintelui</h3>
       </a>
