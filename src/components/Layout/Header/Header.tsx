@@ -7,6 +7,8 @@ const heroBanner = require("../../../images/a.png").default;
 
 const downloadNowImage = require("../../../images/b.png").default;
 
+const msImage = require("../../../images/ms.png").default;
+
 const style = require("./header.module.scss");
 
 export const Header: FunctionComponent = () => {
@@ -16,6 +18,12 @@ export const Header: FunctionComponent = () => {
         <a href="http://www.insmc.ro/">
           <img src={logo} alt="logo" />
         </a>
+
+        <img
+          className={style.msImage}
+          src={msImage}
+          alt="ministerul sanatatii"
+        />
 
         <MobileMenu />
       </div>
