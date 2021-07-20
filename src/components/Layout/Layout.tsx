@@ -1,11 +1,16 @@
 import * as React from "react";
+import ReactGA from "react-ga";
 import { Helmet } from "react-helmet";
 import { Footer } from "./Footer/Footer";
 import { Header } from "./Header/Header";
 
 const style = require("./layout.module.scss");
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children, location }) => {
+  React.useEffect(() => {
+    ReactGA.pageview(`${location.pathname}${location.search}`);
+  }, [location]);
+
   return (
     <section className={style.body}>
       <Helmet>

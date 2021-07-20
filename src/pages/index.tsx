@@ -70,9 +70,9 @@ const cardsData = [
   ],
 ];
 
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
-    <Layout>
+    <Layout location={props.location}>
       <div className={style.container}>
         <ImcCalculator />
 
