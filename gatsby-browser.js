@@ -1,4 +1,4 @@
 import ReactGA from "react-ga";
 import "./src/sass/_global.scss";
 
-ReactGA.initialize("G-6R8TQD7ZR3");
+ReactGA.initialize("UA-202736672-1");
